@@ -55,3 +55,11 @@ let livros = [
 
 console.log(livros[1].titiulo);
 console.log(livros[0].autor);
+
+// let pedido = {
+//     codigo = "123abc",
+//     produtos = "06/04/2023",
+//     data =
+//     preco =
+// }
+// console.log(``);
