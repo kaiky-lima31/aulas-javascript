@@ -82,6 +82,39 @@ let resultado = idade >= 18 ? "maior" : "menor"
 
  console.log(`A pessoa é ${resultado} de idade`);
 
+ console.log("--------");
+
+ /* switch/case/break/default */
  
+ /* Algoritimo de um chatbot
+ Opçoes:
+ 1  -> Pedir Informaçoes 
+ 2  -> Abrir uma reclamção 
+ 3  -> Fazer um elogio
+ x  -> Falar com atendente humano */
+ let opcao = parseInt ( prompt("Digite 1, 2 ou 3 ") );
+ let mensagem;
+
+ switch(opcao){
+    case 1:
+         mensagem = "Ok, o que quer saber?";
+        break;
+    
+    case 2:
+        mensagem = "Puxa, que pena. O que houve?"
+        break;
+
+    case 3:  
+        mensagem = "Bacana! Conte-me :)"
+        break;
+
+    default:
+        mensagem = "Não entendi... vou chamar alguém! "
+        break;
+
+ }
+
+ console.log(`Opção escolhida: ${opcao}`);
+ console.log(mensagem);
 
 
