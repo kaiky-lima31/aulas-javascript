@@ -14,7 +14,7 @@ Operadores relacionais:
 // Exemplos 
 const aluno = "Chaves";
 let nota1 = 10;
-let nota2 = 5;
+let nota2 = 9;
 let faltas = 11;
 let media = (nota1 + nota2) / 2;
 
@@ -38,4 +38,30 @@ reprovado.*/
     console.log("Reprovado");
  }
 
+ console.log("--------");
+ /* Condicional Encadeada */
 
+ /* Algoritimo para ánalise de desempenho 
+
+Média menor que 3? PÉSSIMO
+Média menor que 5? RUIM 
+Média menor que 7? REGULAR 
+Média menor que 9? BOM
+Nenhuma das anteriores? ÓTIMO */
+
+// Variavel ira armazenar o texto/desempenho
+let desempenho; // começa indefinida 
+if(media < 3){
+    desempenho = "PÉSSIMO";
+
+} else if(media < 5){
+    desempenho = "RUIM";
+}else if(media < 7){
+    desempenho = "REGULAR";
+}else if(media < 9 ){
+    desempenho = "BOM";
+}else{
+    desempenho = "ÓTIMO";
+}
+
+console.log(desempenho);
