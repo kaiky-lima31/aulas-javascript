@@ -65,3 +65,23 @@ if(media < 3){
 }
 
 console.log(desempenho);
+
+/* if/else de um linha (shorthand if/else)*/ 
+ let idade = 18;
+// // Versão "normal"
+// let resultado;
+
+// if( idade >= 18){
+//     resultado = "maior"
+// }else {
+//     resultado = "menor";
+// }
+
+// Versão abreviada 
+let resultado = idade >= 18 ? "maior" : "menor" 
+
+ console.log(`A pessoa é ${resultado} de idade`);
+
+ 
+
+
