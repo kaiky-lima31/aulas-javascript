@@ -52,7 +52,89 @@ botao.addEventListener("click", function(){
     }
 });
 
-// Exemplo 3: simulação de cadastro 
-/* Captura de dados de formulário, cálculos de valores,
-verificação condicional, criação de HTML via JS, adição 
-de conteúdo/resultados da página (DOM) */
+/* Exemplo 3: sumulação de cadastro
+Captura de dados de formulario, cálculos de valores,
+verificação condicional, criação de HTML via JS,
+adição de conteudo/resultados na pagina (DOM) */
+
+// Acessar e selecionar elementos que serão usados 
+// pegou os elemento e jogu na memoria
+const formulario = document.querySelector("form");
+const camponome = document.querySelector("#nome");
+const camponota1 = document.querySelector("#nota1");
+const camponota2 = document.querySelector("#nota2");
+const divResultados = document.querySelector("#resultados");
+
+/* Etapa 2
+Monitorar o evento de acionamento do formulário,
+ou seja, detactar quando o usario clica no botao do formulario
+OU pressiona ENTER */
+formulario.addEventListener("submit", function(event){
+    event.preventDefault();
+    /* Usamos o comando abaixo para anular o 
+    comportamento padrao do navegador de tentar fazer um redirecionamento de página
+    ao acionar o formulario. isso é importante para as açoes progamadas na função possam
+    ser interpretadas. */
+
+    // Etapa 3: capturar os valores digitados 
+
+    let nome = camponome.value; 
+    let nota1 = parseFloat(camponota1.value); 
+    let nota2 = parseFloat(camponota2.value); 
+    /* Exercicios */
+
+    // 1) Calcule e guarde a média destas notas 
+    
+    /* 2) Com a média calculada, determine a situação do 
+    aluno (aprovado/reprovado). Para aprovação, média tem que ser maior ou igual a 7.
+    
+    3) Mostre no console o nome do aluno, suas notas 
+    sua média e sua situação (aprovado ou reprovado.) */
+
+
+    //testes
+    console.log(nome, nota1, nota2);
+
+    let media =( nota1 + nota2 ) / 2;
+    console.log(media);
+    let desempenho;
+
+     if(media >= 7 ){
+        desempenho = "aprovado";
+    }else if(media <= 6 ){
+        desempenho = "reprovado";
+    }
+    console.log(desempenho);
+
+    /* Programação para colocar os resultados no HTML */
+    
+    // 1)Criar o elemento/tag que será colocada no HTML
+    let paragrafo = document.createElement("p");
+
+    // 2) Montar o conteúdo da nova tag 
+    paragrafo.innerHTML = `${nome} - ${media} - ${desempenho}`;
+    
+   // console.log(paragrafo);
+
+    // 3) Adicionar ao HTML de destino (injetar no DOM)
+    divResultados.appendChild(paragrafo);
+
+    // Limpar os campos
+    formulario.reset();
+
+    // Devolver o foco (cursor) para o campo nome
+    camponome.focus();
+});
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
